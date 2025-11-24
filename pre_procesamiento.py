@@ -28,6 +28,9 @@ def tokenizar(documento_texto_limpio):
     ]
     return tokens_filtrados
 
+def eliminar_repetidos(tokens):
+    patron = re.compile(r'^([a-zA-Z])\1+$')
+    return [t for t in tokens if not patron.match(t)]
 
 def stemming(tokens):
     tokens_stemmizados = [STEMMER_PORTER.stem(palabra) for palabra in tokens]
@@ -36,5 +39,6 @@ def stemming(tokens):
 def preprocesar(documento_texto):
     texto_limpio = limpiar(documento_texto)
     tokens_filtrados = tokenizar(texto_limpio)
-    tokens_finales = stemming(tokens_filtrados)
+    tokens_repetidas = eliminar_repetidos(tokens_filtrados)
+    tokens_finales = stemming(tokens_repetidas)
     return tokens_finales
