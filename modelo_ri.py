@@ -81,4 +81,3 @@ def mostrar_resultados_jaccard(resultados, df, max_chars=800):
         print(f" Score Jaccard: {score:.4f}")
         print(f"  Texto:")
         print(f"  {preview}...\n")
-        print("-" * 110)
