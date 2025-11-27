@@ -1,4 +1,4 @@
-# modelo_ri.py
+
 import math
 from collections import defaultdict, Counter
 
@@ -9,21 +9,21 @@ class IRModelIndex:
         self.docs = list(df_index_list)
         self.N = len(self.docs)
 
-        # mapa doc_id -> set(terminos)
+ 
         self.doc_terms = defaultdict(set)
-        # mapa doc_id -> longitud_total (suma de tf de todos los términos)
+
         self.doc_len = defaultdict(int)
-        # df por término ya está en index: df = len(index[t])
+
         for term, posting in self.index.items():
             for doc_id, tf in posting:
                 self.doc_terms[doc_id].add(term)
                 self.doc_len[doc_id] += int(tf)
 
-        # precomputar avgdl
+  
         total_len = sum(self.doc_len.get(d, 0) for d in self.docs)
         self.avgdl = (total_len / self.N) if self.N > 0 else 0.0
 
-    # JACCARD (vectores binarios)
+    # JACCARD 
 
     def consulta_jaccard(self, tokens_query, top_k=10):
         q_set = set(tokens_query)
@@ -37,8 +37,7 @@ class IRModelIndex:
         resultados.sort(key=lambda x: x[1], reverse=True)
         return resultados[:top_k]
 
-
-    # TF-IDF (vector consulta / doc usando índice)
+    # TF-IDF 
 
     def _df(self, term):
         return len(self.index.get(term, []))
