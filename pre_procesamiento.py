@@ -36,9 +36,17 @@ def stemming(tokens):
     tokens_stemmizados = [STEMMER_PORTER.stem(palabra) for palabra in tokens]
     return tokens_stemmizados
 
+def generar_bigrams(tokens):
+    return [tokens[i] + "_" + tokens[i+1] for i in range(len(tokens)-1)]
+
 def preprocesar(documento_texto):
     texto_limpio = limpiar(documento_texto)
     tokens_filtrados = tokenizar(texto_limpio)
     tokens_repetidas = eliminar_repetidos(tokens_filtrados)
     tokens_finales = stemming(tokens_repetidas)
+
+    bigrams = generar_bigrams(tokens_finales)
+
+    tokens_finales = tokens_finales + bigrams
+
     return tokens_finales
