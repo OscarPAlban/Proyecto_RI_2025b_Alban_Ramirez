@@ -30,7 +30,7 @@ def average_precision(relevantes, recuperados):
 def evaluar(model, df):
     # Consultas oficiales
     consultas = {
-        "q1": "open world rpg",
+        "q1": "call of duty",
         "q2": "horror atmosphere",
         "q3": "multiplayer shooting"
     }
