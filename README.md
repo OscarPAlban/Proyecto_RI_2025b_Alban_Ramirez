@@ -1,4 +1,4 @@
-# Proyecto_RI_2025b_Alb-n_Ramirez
+# Proyecto_RI_2025b_Alban_Ramirez
 # Sistema de RI de Reviews de Steam
 
 En este proyecto se encuentran 3 modelos de Recuperación de la Información clásica que devolveran el top de documentos encontrados por cada algoritmo en un entorno de "CMD"
