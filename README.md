@@ -19,7 +19,7 @@ Prepara los textos y construye la estructura de datos principal, en este caso un
 
 * **Funciones Clave:**
     * `preprocesar`: Limpieza , tokenización, eliminación de *stop words*, y *stemming* (reducir a la raíz).
-    * `construir_indice`: **CAMBIO CLAVE:** Esta función es la única responsable de generar el **Índice Invertido** (el "índice alfabético" detallado) 
+    * `construir_indice`: Esta función es la única responsable de generar el **Índice Invertido**  
 
 * **Librerías Clave:** `nltk` (para el procesamiento de lenguaje), `pandas` (para la manipulación de datos).
 
