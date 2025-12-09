@@ -33,6 +33,10 @@ Prepara los textos y construye la estructura de datos principal, en este caso un
 
 **Propósito:** Medir si nuestro buscador funciona bien, comparando sus resultados contra una lista de respuestas correctas (qrels.json)
 
+### 4. `cli.py` 
+
+**Propósito:** Ejecutar el código fuente en un terminal, cargar corpus y hacer llamadas a las funciones dentro de las otras librerías.
+
 ---
 
 ## Requisitos de Ejecución
@@ -45,7 +49,20 @@ Para que el proyecto funcione, se debe tener Python instalado y las siguientes l
 
 En caso de no contar con las librerías y para mayor seguridad, dentro de una terminar se deberá ejecutar **"pip install pandas nltk"** o dos comandos separados: **"pip install pandas"** y **"pip install nltk"**
 
-De manera seguida dentro de un Simbolo del Sistema (CMD) se deberá dirigir hacia el directorio de la carpeta que tiene los archivos, **Por ejemplo: C:/Users/TuUsuario/Downloads/Proyecto_RI_2025b_Alban_Ramirez**, una vez en la carpeta y con el lenguaje y las librerías descagadas, se escribirá **"Python cli.py"** y se iniciará el Sistema de Recuperación de la Información.
+Para iniciar la ejecucióm, dentro de un Simbolo del Sistema (CMD) se deberá dirigir hacia el directorio de la carpeta que tiene los archivos, **Por ejemplo: C:/Users/TuUsuario/Downloads/Proyecto_RI_2025b_Alban_Ramirez**, una vez en la carpeta y con el lenguaje y las librerías descagadas, se escribirá **"python cli.py"** y se iniciará el Sistema de Recuperación de la Información.
+
+## Ejecución
+
+Con el Sistema de Recuperación de la Información se realizará de manera automática la carga del corpus, su preprocesamiento y la construcción del indice invertido.
+
+Se presentará las opciones para **"salir"** y **"evaluar"** a demás del espacio para realizar las consultas.
+
+Las consultas son de texto libre, sin embargo el corpus original está en el idioma **Inglés**, a demás la temática principal es **Videojuegos** por lo que los sistemas de RI tendrán un buen desempeño si las consultas se realizan de acuerdo al tema.
+
+En caso de no existir ninguna coincidencia se devolveran los diocumentos que se clasificaron como máscercanos por cada uno de los algoritmos y su Score o métrica será muy bajo o 0.
+
+Una vez que se realize una consulta se mostrará el top 10 de los documentos recuperados con su ID y un fragmento del texto por cada uno de los modelos de RI y se premitirá realizar un nueva consulta.
+
 
 
 
