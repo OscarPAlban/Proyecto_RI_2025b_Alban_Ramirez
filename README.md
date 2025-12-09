@@ -43,9 +43,9 @@ Prepara los textos y construye la estructura de datos principal, en este caso un
 
 Descargar o clonar el codigo fuente y todas sus carpetas y archivos.
 
-Descomprimir el archivo y almacenar todos los documentos como se muestran
+Descomprimir el archivo y almacenar todos los documentos como se encuentran almacenados.
 
-Para que el proyecto funcione, se debe tener Python instalado y las siguientes librerías: pandas y nlt
+Para que el proyecto funcione, se debe tener Python instalado y las siguientes librerías: pandas y nlt.
 
 En caso de no contar con las librerías y para mayor seguridad, dentro de una terminar se deberá ejecutar **"pip install pandas nltk"** o dos comandos separados: **"pip install pandas"** y **"pip install nltk"**
 
