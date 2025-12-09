@@ -52,6 +52,8 @@ def preprocesar(documento_texto):
 
     return tokens_finales
 
+######## Indice Invertido ########
+
 def construir_indice(df_tokens_preprocesados):
 
     df_tokens = df_tokens_preprocesados.reset_index().copy()
