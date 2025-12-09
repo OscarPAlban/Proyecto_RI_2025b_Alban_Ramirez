@@ -1,8 +1,7 @@
 # cli.py
 import pandas as pd
 import json
-from pre_procesamiento import preprocesar
-from indice_invertido import construir_indice
+from pre_procesamiento import preprocesar, construir_indice
 from modelo_ri import IRModelIndex
 from tqdm import tqdm
 
